@@ -1,18 +1,36 @@
-## @activescott/cookieconsent
+# @activescott/cookieconsent
 
-This is a just-enough-working fork of https://github.com/osano/cookieconsent. This one has the following differences:
+[![npm version](https://badge.fury.io/js/%40activescott%2Fcookieconsent.svg)](https://www.npmjs.com/package/@activescott/cookieconsent)
+[![Build Status](https://github.com/activescott/cookieconsent/workflows/main/badge.svg)](https://github.com/activescott/cookieconsent/actions)
+[![MIT License][li]][ll]
+
+This is a just-enough-working fork of https://github.com/osano/cookieconsent. This fork has the following differences:
 
 1. It works. I had to update some dependencies to get it to even build. It appears that [Osano has decided to abandon](https://github.com/osano/cookieconsent/pull/784#issuecomment-734986300) the open source version of their package instead they just _"recommend just using the free version of our commercial offering"_.
 2. Uses the v4.0 code base which was never published to npm, but was pushed to github.
 3. Is module-only and doesn't attach a global to the window by default.
 4. Includes some minimal typescript types in the package.
 5. Exporting the original source rather than the minified bundle. I presume you'll use your own bundler.
+6. It is automatically deployed according to the release process described below (so send me your PR and as long as it passes CI and is reasonable improvement I will merge it).
+
+## Usage
 
 To use it, I'm just using the following
 
 ```sh
 npm install -P "github:activescott/cookieconsent#beta"
 ```
+
+## Release Process (Deploying to NPM) 🚀
+
+We use [semantic-release](https://github.com/semantic-release/semantic-release) to consistently release [semver](https://semver.org/)-compatible versions. This project deploys to multiple [npm distribution tags](https://docs.npmjs.com/cli/dist-tag). Each of the below branches correspond to the following npm distribution tags:
+
+| branch | npm distribution tag |
+| ------ | -------------------- |
+| master | latest               |
+| beta   | beta                 |
+
+To trigger a release use a Conventional Commit following [Angular Commit Message Conventions](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines) on one of the above branches.
 
 ## What's next?
 
@@ -22,7 +40,9 @@ I just want to keep my use of this package working for now. I am considering the
 
 - Setting up automated publishing to NPM with semantic-release
 
-## Below here from the original repo that this was forked from https://github.com/osano/cookieconsent
+## The remainder of this readme (below) is from the original repo that this was forked from at https://github.com/osano/cookieconsent
+
+---
 
 [![Build Status][bi]][bl]
 [![MIT License][li]][ll]

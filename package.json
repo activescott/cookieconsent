@@ -39,8 +39,8 @@
   },
   "homepage": "https://github.com/activescott/cookieconsent",
   "scripts": {
-    "build:dev": "npx webpack --config webpack.dev.js",
-    "build": "npm run clean && npx webpack -p --optimize-minimize --config webpack.prod.js",
+    "build:dev": "./node_modules/.bin/webpack --config webpack.dev.js",
+    "build": "./node_modules/.bin/webpack -p --optimize-minimize --config webpack.prod.js",
     "test": "jest ./src --verbose --coverage && rm -rf coverage/"
   },
   "repository": {
