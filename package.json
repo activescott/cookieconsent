@@ -4,6 +4,15 @@
   "description": "FORK OF Osano cookie consent tool.",
   "main": "src/index.js",
   "types": "types/index.d.ts",
+  "files": [
+    "src/**/*",
+    "!src/**/*.spec.js",
+    "!src/__mocks__/",
+    "types/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
