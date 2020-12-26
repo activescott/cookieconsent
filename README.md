@@ -15,10 +15,10 @@ This is a just-enough-working fork of https://github.com/osano/cookieconsent. Th
 
 ## Usage
 
-To use it, I'm just using the following
+To use it, install using
 
 ```sh
-npm install -P "github:activescott/cookieconsent#beta"
+npm install -P "@activescott/cookieconsent"
 ```
 
 ## Release Process (Deploying to NPM) 🚀
